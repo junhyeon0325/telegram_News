@@ -10,12 +10,12 @@ updater = Updater(token='5366296136:AAF9B_3YXH5fAEAefJDnkAJUC08gGTY1mX8', use_co
 dispatcher = updater.dispatcher
 
 #step3./start 명령어가 입력되었을 때의 함수 정의
-def start(update, context):
+def coin1(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="비트코인과 관련된 뉴스 기사들입니다.")
     a.send_links()
 
 #step4.위에서 정의한 함수를 실행할 CommandHandler 정의
-start_handler = CommandHandler('비트코인', start) #('명렁어',명령 함수)
+start_handler = CommandHandler('비트코인', coin1) #('명렁어',명령 함수)
 
 #step5.Dispatcher에 Handler를 추가
 dispatcher.add_handler(start_handler)

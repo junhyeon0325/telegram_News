@@ -15,7 +15,7 @@ def start(update, context):
     a.send_links()
 
 #step4.위에서 정의한 함수를 실행할 CommandHandler 정의
-start_handler = CommandHandler(a.query, start) #('명렁어',명령 함수)
+start_handler = CommandHandler('비트코인', start) #('명렁어',명령 함수)
 
 #step5.Dispatcher에 Handler를 추가
 dispatcher.add_handler(start_handler)
